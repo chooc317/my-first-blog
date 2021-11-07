@@ -8,7 +8,7 @@
         <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <div class="page-header">
+        <!-- <div class="page-header">
         {% if user.is_authenticated %}
             <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
         {% endif %}
@@ -20,7 +20,17 @@
                 {% block content %}
                 {% endblock %}
                 </div>
-            </div>/
+            </div>
         </div>
-    </body>/
-</html>/
+    -->
+    <p>おはようございます<br>今日はよく眠れましたか？<br>
+        <br>
+        <input type="radio" name="q1" value="よく眠れた"> よく眠れた！<br>
+        <input type="radio" name="q1" value="普通"> 普通<br>
+        <input type="radio" name="q1" value="あまり眠れなかった">あまり眠れなかった…
+        </p><br>
+        <p><input type="submit" value="Fitbitと比較"></p>
+        <br>
+    <p>今日のあなたの睡眠効率は{{sleepEfficiency}}％です。</p>
+    </body>
+</html>
